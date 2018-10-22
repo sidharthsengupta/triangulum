@@ -24,6 +24,7 @@ server.post('/api/crawl', (request, reply) => {
     crawler.send(request.body);
     crawler.on('message', (result) => {
       if (result.error) {
+        console.log("Error in the result");
         server.log.error(result.error);
         reply.code(500);
       }

@@ -11,5 +11,13 @@
   },
   "devDependencies": {
     "chalk": "2.4.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "react-scripts": "^2.0.5",
+    "request": "^2.88.0",
+    "url-parse": "^1.4.3"
   }
 }
