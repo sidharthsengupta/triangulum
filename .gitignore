@@ -6,9 +6,12 @@
 
 # testing
 */coverage
+cypress/videos
+cypress/screenshots
 
 # production
-*/build
+*/build/*
+!*/build/.gitkeep
 
 # misc
 .DS_Store

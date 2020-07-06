@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render should render correctly 1`] = `
+<HashRouter>
+  <div>
+    <withRouter(MobileContainer)>
+      <Route
+        component={[Function]}
+        exact={true}
+        key="form"
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        key="graph"
+        path="/graph"
+      />
+      <Route
+        component={[Function]}
+        key="history"
+        path="/history"
+      />
+    </withRouter(MobileContainer)>
+    <withRouter(DesktopContainer)>
+      <Route
+        component={[Function]}
+        exact={true}
+        key="form"
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        key="graph"
+        path="/graph"
+      />
+      <Route
+        component={[Function]}
+        key="history"
+        path="/history"
+      />
+    </withRouter(DesktopContainer)>
+  </div>
+</HashRouter>
+`;

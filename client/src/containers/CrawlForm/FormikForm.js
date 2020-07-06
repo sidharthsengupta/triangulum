@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Dimmer,
   Loader,
   Button,
@@ -15,10 +16,15 @@ import ErrorMessage from '../../components/Form/ErrorMessage';
 /**
  * Form to wrap with formik HOC
  */
-class FormikForm extends React.PureComponent {
+export class FormikForm extends React.PureComponent {
   renderFields = () => (
     Object.keys(schema).map(field => (
-      <Field key={field} formikProps={this.props} field={schema[field]} />
+      <Field
+        key={field}
+        formikProps={this.props}
+        field={schema[field]}
+        data-cy={`field-${field}`}
+      />
     ))
   )
 
@@ -29,28 +35,29 @@ class FormikForm extends React.PureComponent {
     } = this.props;
 
     const submitProps = {
+      className: 'submitBtn',
       fluid: true,
       icon: 'send',
-      size: 'large',
       type: 'submit',
       color: 'violet',
       content: 'Send',
       disabled: isSubmitting,
+      'data-cy': 'button-submit',
     };
 
     return (
-      <div>
+      <Container text className={'page'}>
         <Dimmer active={isSubmitting} inverted>
-          <Loader>Crawling the interwebs...</Loader>
+          <Loader data-cy='loader'>Crawling the interwebs...</Loader>
         </Dimmer>
 
-        <Form size={'large'} onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           {this.renderFields()}
+          <ErrorMessage schema={schema} {...this.props} />
+
           <Button {...submitProps} />
         </Form>
-
-        <ErrorMessage schema={schema} {...this.props} />
-      </div>
+      </Container>
     );
   }
 }

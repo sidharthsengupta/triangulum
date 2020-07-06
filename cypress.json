@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:5000",
+  "browser": "chrome",
+  "env": {
+    "testUrl": "http://localhost:9119",
+    "wsUrl": "ws://localhost:5000"
+  },
+  "projectId": "hmrjtx"
+}

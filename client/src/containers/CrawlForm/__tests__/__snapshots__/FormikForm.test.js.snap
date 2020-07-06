@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormikForm should render correctly 1`] = `
+<Container
+  className="page"
+  text={true}
+>
+  <Dimmer
+    active={false}
+    inverted={true}
+  >
+    <Loader
+      data-cy="loader"
+    >
+      Crawling the interwebs...
+    </Loader>
+  </Dimmer>
+  <Form
+    as="form"
+    onSubmit={[MockFunction]}
+  >
+    <Field
+      data-cy="field-url"
+      field={
+        Object {
+          "control": [Function],
+          "label": "Start URL",
+          "name": "url",
+          "placeholder": "http://example.com",
+        }
+      }
+      formikProps={
+        Object {
+          "handleSubmit": [MockFunction],
+          "isSubmitting": false,
+        }
+      }
+      key="url"
+    />
+    <Field
+      data-cy="field-type"
+      field={
+        Object {
+          "control": [Function],
+          "label": "Search Type",
+          "name": "type",
+          "options": Array [
+            Object {
+              "text": "Breadth-first",
+              "value": "bfs",
+            },
+            Object {
+              "text": "Depth-first",
+              "value": "dfs",
+            },
+          ],
+          "placeholder": "Select a Type",
+        }
+      }
+      formikProps={
+        Object {
+          "handleSubmit": [MockFunction],
+          "isSubmitting": false,
+        }
+      }
+      key="type"
+    />
+    <Field
+      data-cy="field-limit"
+      field={
+        Object {
+          "control": [Function],
+          "label": "Limit",
+          "name": "limit",
+          "placeholder": "Maximum Depth Limit",
+          "type": "number",
+        }
+      }
+      formikProps={
+        Object {
+          "handleSubmit": [MockFunction],
+          "isSubmitting": false,
+        }
+      }
+      key="limit"
+    />
+    <Field
+      data-cy="field-keyword"
+      field={
+        Object {
+          "control": [Function],
+          "label": "Keyword (optional)",
+          "name": "keyword",
+          "placeholder": "Word to search for",
+        }
+      }
+      formikProps={
+        Object {
+          "handleSubmit": [MockFunction],
+          "isSubmitting": false,
+        }
+      }
+      key="keyword"
+    />
+    <ErrorMessage
+      handleSubmit={[MockFunction]}
+      isSubmitting={false}
+      schema={
+        Object {
+          "keyword": Object {
+            "control": [Function],
+            "label": "Keyword (optional)",
+            "name": "keyword",
+            "placeholder": "Word to search for",
+          },
+          "limit": Object {
+            "control": [Function],
+            "label": "Limit",
+            "name": "limit",
+            "placeholder": "Maximum Depth Limit",
+            "type": "number",
+          },
+          "type": Object {
+            "control": [Function],
+            "label": "Search Type",
+            "name": "type",
+            "options": Array [
+              Object {
+                "text": "Breadth-first",
+                "value": "bfs",
+              },
+              Object {
+                "text": "Depth-first",
+                "value": "dfs",
+              },
+            ],
+            "placeholder": "Select a Type",
+          },
+          "url": Object {
+            "control": [Function],
+            "label": "Start URL",
+            "name": "url",
+            "placeholder": "http://example.com",
+          },
+        }
+      }
+    />
+    <Button
+      as="button"
+      className="submitBtn"
+      color="violet"
+      content="Send"
+      data-cy="button-submit"
+      disabled={false}
+      fluid={true}
+      icon="send"
+      role="button"
+      type="submit"
+    />
+  </Form>
+</Container>
+`;
